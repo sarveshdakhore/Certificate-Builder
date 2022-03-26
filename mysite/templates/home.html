@@ -1,0 +1,49 @@
+{% extends "layout/layout.html" %} {% block title %} DPS MK | Home{%endblock
+title%}{% block head %}{% endblock head %} {% block list %}
+<li><h1 id="textNormal">CERTIFICATE VERIFICATION</h1></li>
+{% endblock list %} {% block body %}
+<br />
+
+<br /><br />
+<div id="inputBox" class="inputBox">
+  <form method="POST" autocomplete="off" action="" id="inputCodeBox">
+    {{takeCodeForm.hidden_tag()}}
+    <div class="formgroup">
+      <div class="form-group">
+        {{ takeCodeForm.takeCertificateCode.label(class="form-label") }} {% if
+        takeCodeForm.takeCertificateCode.errors %} {{
+        takeCodeForm.takeCertificateCode(class="form-control form-control-lg
+        is-invalid",id="black", onkeyup="addHyphen(this),
+        removeSpace(this)",style="text-transform:uppercase") }}
+        <div class="invalid-feedback">
+          <span>{{ takeCodeForm.takeCertificateCode.errors[0] }}</span><br />
+        </div>
+        {% else %} {{ takeCodeForm.takeCertificateCode(class="form-control
+        form-control-lg",id="black", onkeyup="addHyphen(this),
+        removeSpace(this)",style="text-transform:uppercase") }} {% endif %}
+        <br />
+        <div class="form-group">
+          {{ takeCodeForm.submit(class="btn btn-primary") }}
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<br /><br /><br /><br /><br />
+
+{%endblock body%} {% block script %}
+<script>
+  function addHyphen(element) {
+    let ele = document.getElementById(element.id);
+    ele = ele.value.split("-").join("");
+    let finalVal = ele.match(/.{1,3}/g).join("-");
+    document.getElementById(element.id).value = finalVal;
+  }
+  function removeSpace(element) {
+    let rmsp = document.getElementById(element.id);
+    rmsp = rmsp.value.split(" ").join("");
+    let finalRmsp = rmsp;
+    document.getElementById(element.id).value = finalRmsp;
+  }
+</script>
+{% endblock script %}

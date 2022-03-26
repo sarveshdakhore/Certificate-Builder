@@ -1,0 +1,224 @@
+body {
+  background-color: rgb(40, 59, 77);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.headGreen {
+  color: rgb(236, 236, 236);
+}
+.headerContainer {
+  text-align: center;
+  padding-right: 5%;
+  background-color: rgb(23, 34, 44);
+  width: 100%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+#mainNav {
+  background-color: rgb(23, 34, 44);
+  color: whitesmoke;
+}
+#mainNav div {
+  display: inline;
+}
+#mainNav ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#mainNav a,
+.headerContainer a {
+  text-decoration: none;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+.headerContainer ul {
+  text-align: center;
+}
+.headerContainer li {
+  display: inline;
+}
+#headText {
+  color: rgb(8, 100, 8);
+  margin-top: 1%;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+#textNormal {
+  font-size: 2.5em;
+  color: bisque;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.inputBox {
+  width: 90%;
+  height: auto;
+  align-content: center;
+  margin: auto;
+  border-radius: 30px;
+  max-width: 700px;
+  background-color: rgb(23, 34, 44);
+
+  box-shadow: 0 2.8px 2.2px rgba(4, 33, 56, 0.719),
+    0 6.7px 5.3px rgba(4, 33, 56, 0.719),
+    0 12.5px 10px rgba(4, 33, 56, 0.719) 0 22.3px 17.9px rgba(4, 33, 56, 0.719),
+    0 41.8px 33.4px rgba(4, 33, 56, 0.719), 0 100px 80px rgba(4, 33, 56, 0.719);
+}
+.formgroup {
+  width: 80%;
+  height: auto;
+  align-content: center;
+  margin: auto;
+  align-self: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.form-label {
+  color: rgba(255, 228, 196, 0.767);
+  font-size: 20px;
+}
+#black {
+  background-color: black;
+  width: 70%;
+  min-width: 90%;
+  border-color: rgba(222, 184, 135, 0.397);
+  color: #f0f8ff;
+  letter-spacing: 3px;
+}
+#logoNavBar {
+  margin-top: 1%;
+}
+input[type="text"] {
+  color: rgb(146, 146, 132);
+}
+
+.table-certificate {
+  margin-left: 6%;
+  margin-right: 6%;
+}
+.tb {
+  background-color: rgb(40, 59, 77);
+}
+.disp {
+  width: 88%;
+  margin: auto;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: auto;
+  align-content: center;
+  margin: auto;
+  border-radius: 8px;
+
+  background-color: rgb(23, 34, 44);
+
+  box-shadow: 0 2.8px 2.2px rgba(4, 33, 56, 0.719),
+    0 6.7px 5.3px rgba(4, 33, 56, 0.719),
+    0 12.5px 10px rgba(4, 33, 56, 0.719) 0 22.3px 17.9px rgba(4, 33, 56, 0.719),
+    0 41.8px 33.4px rgba(4, 33, 56, 0.719), 0 100px 80px rgba(4, 33, 56, 0.719);
+}
+.disp h1 {
+  color: rgba(255, 228, 196, 0.756);
+  letter-spacing: 3px;
+}
+.disp p {
+  color: rgba(240, 248, 255, 0.865);
+  font-size: 20px;
+}
+.tb {
+  border-radius: 8px;
+}
+.d-btn {
+  width: 40%;
+  margin-left: 30%;
+}
+
+@media screen and (max-width: 900px) {
+  .d-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .headerContainer {
+    padding-right: 7.5%;
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.extra-info {
+  display: none;
+  line-height: 30px;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+
+.info:hover .extra-info {
+  display: block;
+}
+
+.info {
+  font-size: 20px;
+  padding-left: 5px;
+  width: 20px;
+  border-radius: 15px;
+}
+
+.info:hover {
+  background-color: white;
+  padding: 0 0 0 5px;
+  width: 315px;
+  text-align: left !important;
+}
+td{
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+}

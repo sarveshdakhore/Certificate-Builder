@@ -1,0 +1,83 @@
+{% extends "layout/layout.html" %} {% block title %} DPS MK |
+CERTIFICATE{%endblock title%}{% block list %}
+<p hidden>{{x}}</p>
+<li>
+  <h1 id="textNormal">
+    <a
+      class="btn btn-primary btn-lg"
+      href="{{ url_for('home') }}"
+      target="_blank"
+      role="button"
+      >VERIFY ANOTHER CERTIFICATE</a
+    >
+  </h1>
+</li>
+{% endblock list %}{% block head %}
+<style>
+  .headerContainer {
+    height: auto;
+  }
+</style>
+{% endblock head %} {% block body %}
+
+<br />
+<div class="table-certificate">
+  <table class="table table-dark table-striped tb">
+    <tbody>
+      <tr>
+        <th scope="row">Name</th>
+        <td>{{currentHolder.name}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Event</th>
+        <td>{{currentHolder.event}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Category</th>
+        <td>{{currentHolder.catagory}}</td>
+      </tr>
+      {% if currentHolder.school_name != "" %}
+      <tr>
+        <th scope="row">School</th>
+        <td>{{currentHolder.school_name}}</td>
+      </tr>
+      {% endif %}
+      <tr>
+        <th scope="row">Issue Date</th>
+        <td>{{currentHolder.issue_date}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br />
+<div class="disp" id="disp">
+  <h1><strong>DESCRIPTION:</strong></h1>
+  <p>
+    {% if currentHolder.description != "" %} {{currentHolder.description}} {%
+    endif %}
+    <br />
+
+    {% if descrpt != "" %} {{descrpt}} {% endif %}
+  </p>
+</div>
+<br /><br />
+<div class="disp" id="disp">
+  <a
+    class="btn btn-primary d-btn"
+    href="{{ url_for('static', filename= currentHolder.certificate_code+'.png') }}"
+
+    target="_blank"
+    role="button"
+    download
+    >DOWNLOAD CERTIFICATE
+  </a>
+  <br /><br />
+  <iframe
+  src="{{url_for('static', filename= currentHolder.certificate_code+'.png') }}"
+    width="100%"
+    height="600px"
+  ></iframe>
+</div>
+<br /><br /><br /><br /><br />
+
+{%endblock body%}
