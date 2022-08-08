@@ -6,7 +6,7 @@ check out  https://dpscertificate.pythonanywhere.com
 
 Trial-Code:   PPP-PPP-PPP
 
-Auto Resize of name included, to check it,
+Auto Resize of text included, to check it,
 
 Try Code: QQQ-QQQ-QQQ
 
