@@ -18,6 +18,19 @@ def strintToList(string):
 
 
 
+def desp(certificateDesignID):
+  try:
+    design=designInfo.query.filter_by(certDesignID=certificateDesignID).first()
+    certificateDescription =strintToList(design.description)
+    x=certificateDescription
+    if x[0]=="T":
+      return (str(x[1]))
+    else:
+      return ("")
+  except:
+    return ("")
+
+
 def dataAdder(file):
   df=pd.read_csv(file)
   dataToAdd= df.values.tolist()
