@@ -10,6 +10,8 @@ Auto Resize of text included, to check it,
 
 Try Code: QQQ-QQQ-QQQ
 
+*certificate_data.csv file is for reference only that how data is distributed in actual database
+
 
 
 
