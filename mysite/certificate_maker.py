@@ -18,30 +18,6 @@ def strintToList(string):
 
 
 
-
-"""certificateDesignID='DYNAMIX1.0'
-
-df=pd.read_csv('AddDataToCertificateDB.csv')
-certificatePositionData= df.values.tolist()[0]
-if str(certificatePositionData[-1])=="nan":
-  print("hellonkvbcakszvb")
-else:
-  print("hello")
-  """
-def desp(certificateDesignID):
-  try:
-    df=pd.read_csv(path + 'certificate_data.csv')
-    filterCertificateData =df['certDesignID']==certificateDesignID
-    x=strintToList((df.loc[filterCertificateData,"description"].tolist()[0]))
-    if x[0]=="T":
-      return (str(x[1]))
-    else:
-      return ("")
-  except:
-    return ("")
-
-print(desp("P12"))
-
 def dataAdder(file):
   df=pd.read_csv(file)
   dataToAdd= df.values.tolist()
