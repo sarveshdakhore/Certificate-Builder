@@ -39,9 +39,9 @@ def dataAdder(file):
       pass
     else:
       if i[5].upper()=="T":
-        spectialBool = True
+        specialBool = True
       else:
-        spectialBool = False
+        specialBool = False
 
       if i[-7]!="" or str(i[-7])!="nan":
         schoolReg=True
@@ -81,7 +81,7 @@ def dataAdder(file):
         ex1=i[-4]
       else:
         ex1=""
-      toAdd=certificateInfo(description=desc,position_bool=psn,position=psn1,school_name=schoolp,school_reg=schoolReg,name=i[0],certificate_code=i[1].upper(),event=i[2],catagory=i[3],certificate_design_id=i[4],extra1=ex1,extra2=ex2,extra3=ex3,extra4=ex4)
+      toAdd=certificateInfo(description=desc,special=specialBool,position_bool=psn,position=psn1,school_name=schoolp,school_reg=schoolReg,name=i[0],certificate_code=i[1].upper(),event=i[2],catagory=i[3],certificate_design_id=i[4],extra1=ex1,extra2=ex2,extra3=ex3,extra4=ex4)
       dab.session.add(toAdd)
       dab.session.commit()
 
