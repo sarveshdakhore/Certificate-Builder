@@ -1,21 +1,21 @@
 # Certificate-Builder
 
-Developer - Sarvesh Dakhore
+**Developer:** Sarvesh Dakhore
 
-check out  https://dpscertificate.pythonanywhere.com 
+Check out our website: https://dpscertificate.pythonanywhere.com 
 
-Trial-Code:   PPP-PPP-PPP
+Trial Code: `PPP-PPP-PPP`
 
-Auto Resize of text included, to check it,
+#### Auto Resize of Text
 
-Try Code: QQQ-QQQ-QQQ
+To check the auto resize of text feature, use the following code: `QQQ-QQQ-QQQ`
 
-Points to note:
-  1) certificate_data.csv file is for reference only that how data is distributed in actual database
-  2) Make virtual environment in folder 'mysite'
-  3) Make sure to install all requirements mentioned in 'requirements.txt'
+### Points to Note
 
+- The `certificate_data.csv` file is for reference purposes only, to give you an idea of how the data is distributed in the actual database.
 
+- Make sure to create a virtual environment in the `mysite` folder before using the application.
 
+- Please ensure that all requirements mentioned in the `requirements.txt` file are installed.
 
-
+**Note:** The trial code is for testing purposes only and should not be used for any official or commercial use.
